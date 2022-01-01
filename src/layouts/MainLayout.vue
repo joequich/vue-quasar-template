@@ -1,7 +1,7 @@
 <template>
     <q-layout view="hHh LpR lff">
     <!-- <q-header elevated class="glossy"> -->
-    <q-header>
+    <q-header class="bg-black" height-hint="58">
       <q-toolbar>
         <q-btn
           flat
@@ -15,14 +15,18 @@
         <q-toolbar-title>
           Header
         </q-toolbar-title>
-        <q-avatar>
-            <img src="https://cdn.quasar.dev/img/avatar.png">
-            <q-menu anchor="bottom left" self="top left">
-                <q-item clickable>
-                    <q-item-section>Cerrar Sesion</q-item-section>
-                </q-item>
+        <q-btn round flat no-wrap>
+            <q-avatar sise="26px">
+                <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+            </q-avatar>
+            <q-menu auto-close>
+                <q-list dense>
+                    <q-item clickable>
+                        <q-item-section>Cerrar Sesion</q-item-section>
+                    </q-item>
+                </q-list>
             </q-menu>
-        </q-avatar>
+        </q-btn>
       </q-toolbar>
     </q-header>
 
@@ -43,16 +47,19 @@
         <!-- </q-scroll-area> -->
     </q-drawer>
 
-    <q-footer elevated class="bg-black">
+    <q-footer class="bg-black">
         <q-toolbar>
-            <div>© Copy</div>
+            <span class="text-body1 text-grey-3 text-weight-bold">
+                © Copy
+            </span>
             <q-space></q-space>
-            <div>By Example</div>
+            <span class="text-body1 text-grey-3 text-weight-bold">
+                By Example
+            </span>
         </q-toolbar>
     </q-footer>
 
     <q-page-container>
-      <HelloWorld />
       <router-view />
     </q-page-container>
   </q-layout>
